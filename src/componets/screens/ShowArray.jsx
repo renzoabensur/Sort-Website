@@ -12,7 +12,6 @@ export default function showArray(props) {
         <Container>
             <MainContainer>
             {props.array.map((distance) => {
-                console.log(distance)
                 return (
                     <BarChartContainer>
                         <MakeBar height={distance} colors={["#ffd847", "#e0a106"]} />
