@@ -1,5 +1,6 @@
+import ShowArray from '../screens/ShowArray'
 //max 180
-const arrayMaxLength = 7
+const arrayMaxLength = 180
 
 export function randomArray() {
     let randomArray = []
@@ -27,7 +28,8 @@ export function selectionSort(currentArray) {
         selectArray[tempPosition] = selectArray[i]
         selectArray[i] = temp
     }
-    return (selectArray)
+    // return (selectArray)
+    return (<div><ShowArray array={selectArray} /></div>)
 }
 
 export function bubbleSort(currentArray) {
@@ -168,7 +170,7 @@ export function quickSort(currentArray) {
     return (quickArray)
 }
 
-export function heapSort(currentArray) {
+export function heapSort(currentArray) { //arrumar
     var heapArray = []
     for (var i = 0; i < arrayMaxLength; i++) {
         heapArray.push(currentArray[i])
@@ -176,8 +178,7 @@ export function heapSort(currentArray) {
     console.log(heapArray)
 
     // Heap sort (entender melhor)
-    function sort( arr)
-    {
+    function sort( arr){
         var n = arr.length;
  
         // Build heap (rearrange array)
@@ -185,7 +186,7 @@ export function heapSort(currentArray) {
             heapify(arr, n, i);
  
         // One by one extract an element from heap
-        for (var i = n - 1; i > 0; i--) {
+        for (i = n - 1; i > 0; i--) {
             // Move current root to end
             var temp = arr[0];
             arr[0] = arr[i];
@@ -198,8 +199,7 @@ export function heapSort(currentArray) {
  
     // To heapify a subtree rooted with node i which is
     // an index in arr[]. n is size of heap
-    function heapify(arr, n, i)
-    {
+    function heapify(arr, n, i){
         var largest = i; // Initialize largest as root
         var l = 2 * i + 1; // left = 2*i + 1
         var r = 2 * i + 2; // right = 2*i + 2
@@ -213,7 +213,7 @@ export function heapSort(currentArray) {
             largest = r;
  
         // If largest is not root
-        if (largest != i) {
+        if (largest !== i) {
             var swap = arr[i];
             arr[i] = arr[largest];
             arr[largest] = swap;
