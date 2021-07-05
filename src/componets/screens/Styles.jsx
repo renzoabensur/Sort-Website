@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  margin-top:150px;
-  margin-left: 50px ;
-  max-width: 500px;
-  height: 500px;
+  margin-top:10%;
+  margin-left: 5%;
+  width: 90%;
+  height: 400px;
   flex-direction: column;
   justify-content: flex;
 `;
@@ -21,6 +21,7 @@ export const BarChartContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  width: 2px;
 `;
 
 export const Chart = css`
@@ -51,7 +52,7 @@ export const MakeBar = styled.div`
 `;
 
 export const BlackLine = styled.div`
-  width: 360%;
+  width: 100%;
   height: 5px;
   background-color: grey;
 `;
